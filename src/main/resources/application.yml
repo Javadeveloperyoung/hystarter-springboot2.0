@@ -1,0 +1,34 @@
+spring:
+  mvc:
+    view:
+      prefix: /WEB-INF/jsp/
+      suffix: .jsp
+  profiles:
+    active: dev
+#  redis:
+#    host: 127.0.0.1 # host ip
+#    port: 6379
+
+server:
+  host: 127.0.0.1
+  port: 8088
+#  servlet:
+#    context-path: /hystartersys  # 修改项目的访问路劲 默认值
+#  url:192.168.1.1
+#   logging.config=classpath:log4j2_dev.xml
+logging:
+  config: classpath:log4j2.yml
+
+
+person:
+  name: yaliu
+  age: 18
+
+customer: {name: customer, age: 18}
+
+username: yaliu
+
+address:
+  - beijing
+  - shanghai
+

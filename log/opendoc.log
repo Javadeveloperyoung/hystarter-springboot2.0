@@ -1,0 +1,39 @@
+2021-11-04 16:14:25.880 - INFO  [           main] o.s.b.StartupInfoLogger        : Starting RequestHttpMain on LAPTOP-8T2LUG7E with PID 20488 (D:\Software\IntellijIDEA_workspace\hystarter-springboot2.0\target\classes started by jpliu in D:\Software\IntellijIDEA_workspace\hystarter-springboot2.0)
+2021-11-04 16:14:25.895 - INFO  [           main] o.s.b.SpringApplication        : The following profiles are active: dev
+2021-11-04 16:14:26.614 - INFO  [           main] o.s.b.w.e.t.TomcatWebServer    : Tomcat initialized with port(s): 8082 (http)
+2021-11-04 16:14:26.631 - INFO  [           main] o.a.j.l.DirectJDKLog           : Initializing ProtocolHandler ["http-nio-8082"]
+2021-11-04 16:14:26.631 - INFO  [           main] o.a.j.l.DirectJDKLog           : Starting service [Tomcat]
+2021-11-04 16:14:26.632 - INFO  [           main] o.a.j.l.DirectJDKLog           : Starting Servlet engine: [Apache Tomcat/9.0.46]
+2021-11-04 16:14:26.898 - INFO  [           main] o.a.j.l.DirectJDKLog           : At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2021-11-04 16:14:26.902 - INFO  [           main] o.a.j.l.DirectJDKLog           : Initializing Spring embedded WebApplicationContext
+2021-11-04 16:14:26.903 - INFO  [           main] letWebServerApplicationContext : Root WebApplicationContext: initialization completed in 973 ms
+2021-11-04 16:14:27.055 - INFO  [           main] c.ExecutorConfigurationSupport : Initializing ExecutorService 'applicationTaskExecutor'
+2021-11-04 16:14:27.131 - INFO  [           main] .w.s.WelcomePageHandlerMapping : Adding welcome page template: index
+2021-11-04 16:14:27.178 - WARN  [           main] tTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2021-11-04 16:14:27.291 - WARN  [           main] .f.FreeMarkerAutoConfiguration : Cannot find template location(s): [classpath:/templates/] (please add some templates, check your FreeMarker configuration, or set spring.freemarker.checkTemplateLocation=false)
+2021-11-04 16:14:27.310 - INFO  [           main] o.a.j.l.DirectJDKLog           : Starting ProtocolHandler ["http-nio-8082"]
+2021-11-04 16:14:27.319 - WARN  [           main] c.s.AbstractApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop'; nested exception is org.springframework.boot.web.server.PortInUseException: Port 8082 is already in use
+2021-11-04 16:14:27.320 - INFO  [           main] c.ExecutorConfigurationSupport : Shutting down ExecutorService 'applicationTaskExecutor'
+2021-11-04 16:14:27.322 - INFO  [           main] o.a.j.l.DirectJDKLog           : Pausing ProtocolHandler ["http-nio-8082"]
+2021-11-04 16:14:27.322 - INFO  [           main] o.a.j.l.DirectJDKLog           : Stopping service [Tomcat]
+2021-11-04 16:14:27.328 - INFO  [           main] o.a.j.l.DirectJDKLog           : Stopping ProtocolHandler ["http-nio-8082"]
+2021-11-04 16:14:27.328 - INFO  [           main] o.a.j.l.DirectJDKLog           : Destroying ProtocolHandler ["http-nio-8082"]
+2021-11-04 16:14:27.334 - INFO  [           main] valuationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2021-11-04 16:15:43.622 - INFO  [           main] o.s.b.StartupInfoLogger        : Starting RequestHttpMain on LAPTOP-8T2LUG7E with PID 18792 (D:\Software\IntellijIDEA_workspace\hystarter-springboot2.0\target\classes started by jpliu in D:\Software\IntellijIDEA_workspace\hystarter-springboot2.0)
+2021-11-04 16:15:43.630 - INFO  [           main] o.s.b.SpringApplication        : The following profiles are active: dev
+2021-11-04 16:15:44.276 - INFO  [           main] o.s.b.w.e.t.TomcatWebServer    : Tomcat initialized with port(s): 8088 (http)
+2021-11-04 16:15:44.288 - INFO  [           main] o.a.j.l.DirectJDKLog           : Initializing ProtocolHandler ["http-nio-8088"]
+2021-11-04 16:15:44.288 - INFO  [           main] o.a.j.l.DirectJDKLog           : Starting service [Tomcat]
+2021-11-04 16:15:44.288 - INFO  [           main] o.a.j.l.DirectJDKLog           : Starting Servlet engine: [Apache Tomcat/9.0.46]
+2021-11-04 16:15:44.519 - INFO  [           main] o.a.j.l.DirectJDKLog           : At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2021-11-04 16:15:44.522 - INFO  [           main] o.a.j.l.DirectJDKLog           : Initializing Spring embedded WebApplicationContext
+2021-11-04 16:15:44.522 - INFO  [           main] letWebServerApplicationContext : Root WebApplicationContext: initialization completed in 856 ms
+2021-11-04 16:15:44.652 - INFO  [           main] c.ExecutorConfigurationSupport : Initializing ExecutorService 'applicationTaskExecutor'
+2021-11-04 16:15:44.706 - INFO  [           main] .w.s.WelcomePageHandlerMapping : Adding welcome page template: index
+2021-11-04 16:15:44.739 - WARN  [           main] tTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2021-11-04 16:15:44.816 - WARN  [           main] .f.FreeMarkerAutoConfiguration : Cannot find template location(s): [classpath:/templates/] (please add some templates, check your FreeMarker configuration, or set spring.freemarker.checkTemplateLocation=false)
+2021-11-04 16:15:44.831 - INFO  [           main] o.a.j.l.DirectJDKLog           : Starting ProtocolHandler ["http-nio-8088"]
+2021-11-04 16:15:44.866 - INFO  [           main] o.s.b.w.e.t.TomcatWebServer    : Tomcat started on port(s): 8088 (http) with context path ''
+2021-11-04 16:15:44.875 - INFO  [           main] o.s.b.StartupInfoLogger        : Started RequestHttpMain in 1.517 seconds (JVM running for 2.771)

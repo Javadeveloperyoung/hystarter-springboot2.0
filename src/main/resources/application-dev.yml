@@ -1,0 +1,27 @@
+spring:
+  mvc:
+    view:
+      prefix: /WEB-INF/jsp/
+      suffix: .jsp
+
+server:
+  host: 127.0.0.1
+  port: 8088
+  #url:192.168.1.1
+  # logging.config=classpath:log4j2_dev.xml
+logging:
+  config: classpath:log4j2.yml
+
+
+person:
+  name: yaliu
+  age: 18
+
+customer: {name: customer, age: 18}
+
+username: yaliu
+
+address:
+  - beijing
+  - shanghai
+
