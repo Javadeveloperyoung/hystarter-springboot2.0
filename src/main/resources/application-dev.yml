@@ -3,9 +3,90 @@ spring:
     view:
       prefix: /WEB-INF/jsp/
       suffix: .jsp
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    driver-class-name: oracle.jdbc.driver.OracleDriver
+    url: jdbc:oracle:thin:@127.0.0.1:1521:orcl
+    username: yaliu
+    password: yaliu123
+    druid:
+      # 连接池的配置信息
+      # 初始化大小，最小，最大
+      initial-size: 5
+      min-idle: 5
+      maxActive: 20
+      # 配置获取连接等待超时的时间
+      maxWait: 60000
+      # 配置间隔多久才进行一次检测，检测需要关闭的空闲连接，单位是毫秒
+      timeBetweenEvictionRunsMillis: 60000
+      # 配置一个连接在池中最小生存的时间，单位是毫秒
+      minEvictableIdleTimeMillis: 300000
+      validationQuery: SELECT 1
+      testWhileIdle: true
+      testOnBorrow: false
+      testOnReturn: false
+      # 打开PSCache，并且指定每个连接上PSCache的大小
+      poolPreparedStatements: true
+      maxPoolPreparedStatementPerConnectionSize: 20
+      # 配置监控统计拦截的filters，去掉后监控界面sql无法统计，'wall'用于防火墙
+      filters: stat,wall,slf4j
+      # 通过connectProperties属性来打开mergeSql功能；慢SQL记录
+      connectionProperties: druid.stat.mergeSql=true;druid.stat.slowSqlMillis=5000
+      # 配置DruidStatFilter
+      web-stat-filter:
+        enabled: true
+        url-pattern: "/*"
+        exclusions: "*.js,*.gif,*.jpg,*.bmp,*.png,*.css,*.ico,/druid/*"
+      # 配置DruidStatViewServlet
+      stat-view-servlet:
+        # IP白名单(没有配置或者为空，则允许所有访问)
+        allow: 127.0.0.1
+        # IP黑名单 (存在共同时，deny优先于allow)
+        deny: 192.168.1.73
+        # 禁用HTML页面上的“Reset All”功能
+        reset-enable: false
+        # druid登录的账户名
+        login-username: admin
+        # druid登录的密码
+        login-password: 123
+
+        # 不要写2个*号！要1个！
+        url-pattern: "/druid/*"
+        #这里配true才能访问监控页面！
+        enabled: true
+
+#  druid:
+#    initial-size: 5   # 初始化大小
+#    min-idle: 5       # 最小空闲连接个数
+#    max-active: 20    # 最大连接个数
+#    max-wait: 60000   # 配置获取连接等待超时的时间
+#    time-between-eviction-runs-millis: 60000    # 配置间隔多久才进行一次监测，监测需要关闭的空闲连接，单位时毫秒
+#    min-evictable-idle-time-millis: 60000       # 配置一个连接在池中最小生存的时间
+#    validation-query: select 'x'                # 用来监测连接是否有效的sql，要求是一个查询语句
+#    test-while-idle: true            # 建议配置为true，不影响性能，并且保证安全性。如果空闲时间大于timeBetweenEvictionRunsMillis，执行validationQuery检测连接是否有效。
+#    test-on-borrow: false            # 申请连接时执行validationQuery检测连接是否有效，做了这个配置会降低性能
+#    test-on-return: false            # 归还连接时执行validationQuery检测连接是否有效，做了这个配置会降低性能
+#    pool-prepared-statements: true   # 打开PSCache，并且指定每个连接上PSCache的大小
+#    max-open-prepared-statements: 20
+#    filter:
+#      commons-log:
+#      connection-logger-name: stat,wall,log4j   # 配置监控统计拦截的filters，去掉后监控界面sql无法统计，'wall'用于防火墙，此处是filter修改的地方
+#      stat-view-servlet:
+#        url-pattern: /druid/*  # 监控页面访问路径
+#        # 允许清空统计数据
+#        reset-enable: true
+#        login-username: admin
+#        login-password: 123456
+#          # StatViewSerlvet展示出来的监控信息比较敏感，是系统运行的内部情况，如果你需要做访问控制，可以配置allow和deny这两个参数
+#          # deny优先于allow，如果在deny列表中，就算在allow列表中，也会被拒绝。如果allow没有配置或者为空，则允许所有访问
+#          # 配置的格式
+#          # <IP>
+#          # 或者<IP>/<SUB_NET_MASK_size>其中128.242.127.1/24
+#        # 24表示，前面24位是子网掩码，比对的时候，前面24位相同就匹配,不支持IPV6。
+#        allow:
+#        deny:
 
 server:
-  host: 127.0.0.1
   port: 8088
   #url:192.168.1.1
   # logging.config=classpath:log4j2_dev.xml
