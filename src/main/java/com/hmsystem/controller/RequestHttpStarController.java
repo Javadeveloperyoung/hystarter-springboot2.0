@@ -19,13 +19,19 @@ public class RequestHttpStarController {
     private String addressT;
 
     @Autowired
+    private Environment env;
+
+    @Autowired
     private Person person;
 
     @ResponseBody
     @RequestMapping("/indexString")
     public String requestString(){
+        System.out.println("管理員： "+uname);
         System.out.println(addressT);
         System.out.println(person);
+        System.out.println("env"+env.getProperty("server.port"));
+        System.out.println("env"+env.getActiveProfiles());
         return uname + " Welcome to Java World!";
     }
 

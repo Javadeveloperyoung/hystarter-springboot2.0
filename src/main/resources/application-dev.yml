@@ -44,12 +44,15 @@ logging:
 
 
 person:
-  name: yaliu
+  name: yaliu_dev
   age: 18
 
 customer: {name: customer, age: 18}
 
-username: yaliu
+username: admin
+
+name: admin
+
 
 address:
   - beijing

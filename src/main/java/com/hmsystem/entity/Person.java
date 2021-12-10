@@ -8,6 +8,7 @@ import org.springframework.stereotype.Component;
 public class Person {
     private String name;
     private int age;
+    private String[] address;
 
     public String getName() {
         return name;
@@ -23,6 +24,14 @@ public class Person {
 
     public void setAge(int age) {
         this.age = age;
+    }
+
+    public String[] getAddress() {
+        return address;
+    }
+
+    public void setAddress(String[] address) {
+        this.address = address;
     }
 
     @Override

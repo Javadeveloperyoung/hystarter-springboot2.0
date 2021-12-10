@@ -13,12 +13,12 @@ logging:
 
 
 person:
-  name: yaliu
+  name: yaliu-pro
   age: 18
 
 customer: {name: customer, age: 18}
 
-username: yaliu
+username: yaliu-pro
 
 address:
   - beijing
